@@ -3,7 +3,7 @@
     "description": "This package can be used to get random value from an array with given probability for each value",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "Grzegorz Lieske",

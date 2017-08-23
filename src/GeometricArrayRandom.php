@@ -17,6 +17,7 @@ class GeometricArrayRandom
     public const MODE_TWO_DIMENSIONS = 2;
     private const MODE_TWO_DIMENSIONS_VALUES_INDEX = 0;
     private const MODE_TWO_DIMENSIONS_PROBABILITIES_INDEX = 1;
+    private const EPSILON = 0.00001;
     /** @var  array */
     private $matrix;
     /** @var  array */
@@ -75,7 +76,7 @@ class GeometricArrayRandom
     {
         $probabilitySum = 0;
         foreach ($this->matrix as [$value, $probability]) {
-            if ($probability < 0 || $probability > 1) {
+            if ($probability < 0 || $probability > 1 + self::EPSILON) {
                 throw new ProbabilityOutOfScopeException();
             }
             $probabilitySum += $probability;
@@ -84,9 +85,21 @@ class GeometricArrayRandom
             }
         }
 
-        if ($probabilitySum !== 1.0) {
+        if (!$this->same_float($probabilitySum, 1.0)) {
             throw new InvalidProbabilitySumException();
         }
+    }
+
+    /**
+     * this method compares two floats with given prexision.
+     * @param float $a
+     * @param float $b
+     * @param float $epsilon
+     * @return bool
+     */
+    private function same_float(float $a, float $b, float $epsilon = self::EPSILON)
+    {
+        return abs($a - $b) < $epsilon;
     }
 
     /**
