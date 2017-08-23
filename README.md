@@ -28,7 +28,7 @@ $matrix = [
     [0.1, 0.1, 0.1, 0.3, 0.2, 0.2] // probabilities
 ]; 
 
-$generator = new GeometricArrayRandom($matrix);
+$generator = new GeometricArrayRandom($matrix, GeometricArrayRandom::MODE_TWO_DIMENSIONS);
 $result = $generator->nextNValues(10);
 
 // possible result: [4, null, 5, 1, null, 5, 5, 4, null, 4]
