@@ -1,0 +1,21 @@
+{
+    "name": "outcloud/geometric-array-random",
+    "description": "This package can be used to get random value from an array with given probability for each value",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Grzegorz Lieske",
+            "email": "grzesiu.lieske@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "OutCloud\\GeometricArrayRandom\\": "src/"
+        }
+    }
+}
