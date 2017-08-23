@@ -43,7 +43,7 @@ composer require outcloud\geometric-array-random
 ```
 
 
-I'm using Semantic Versioning http://semver.org/
+I'm using Semantic Versioning http://semver.org/spec/v2.0.0.html
 
 
 
