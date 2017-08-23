@@ -16,9 +16,8 @@ $matrix = [
 ]; 
 
 $generator = new GeometricArrayRandom($matrix);
-$result = $generator->nextNValues(10);
-
-// possible result: [4, null, 5, 1, null, 5, 5, 4, null, 4]
+$result = $generator->nextNValues(10);  // possible result: [4, null, 5, 1, null, 5, 5, 4, null, 4]
+$singleValue = $generator->nextValue(); // possible result : 4
 ```
 ### 'Separately' Input Mode
 
@@ -29,9 +28,8 @@ $matrix = [
 ]; 
 
 $generator = new GeometricArrayRandom($matrix, GeometricArrayRandom::MODE_TWO_DIMENSIONS);
-$result = $generator->nextNValues(10);
-
-// possible result: [4, null, 5, 1, null, 5, 5, 4, null, 4]
+$result = $generator->nextNValues(10);  // possible result: [4, null, 5, 1, null, 5, 5, 4, null, 4]
+$singleValue = $generator->nextValue(); // possible result : 4
 ```
 
 ## Additional info
