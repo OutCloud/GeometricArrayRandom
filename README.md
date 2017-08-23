@@ -35,7 +35,7 @@ $result = $generator->nextNValues(10);
 ```
 
 ## Additional info
- - Sum of probabilities in single matrix must always be equal 1.0 (Otherwise an exception will be thrown)
+ - Sum of probabilities in single matrix must always be equal to 1.0 (Otherwise an exception will be thrown)
  - Probability is 'float' value greater or equal to 0 and lower or equal to 1 (Otherwise an exception will be thrown)
  - Each value must always have a probability assigned (Otherwise an exception will be thrown)
  
